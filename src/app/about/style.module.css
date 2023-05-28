@@ -1,0 +1,53 @@
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Center items horizontally */
+  align-items: center; /* Center items vertically */
+  gap: 20px;
+  height: 100vh;
+}
+.eachCard {
+  background-color: #f0f0f0;
+  padding: 20px;
+  transition: 200ms ease-in-out;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+  left: 0;
+}
+
+.eachCard:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4);
+}
+
+.eachCard:not(:first-child) {
+  margin-left: -2rem;
+}
+
+.eachCard:not(:last-child):hover,
+.eachCard:not(:last-child):focus-within {
+  transform: translateY(-1rem);
+}
+
+.eachCard:not(:last-child):hover ~ .eachCard,
+.eachCard:not(:last-child):focus-within ~ .eachCard {
+  transform: translateX(2rem);
+}
+
+.card1 {
+  --index: 1;
+  background-color: red;
+}
+.card2 {
+  --index: 2;
+  background-color: green;
+}
+.card3 {
+  --index: 3;
+  background-color: blue;
+}
+.card4 {
+  --index: 4;
+  background-color: blueviolet;
+}
